@@ -6,7 +6,7 @@
   <p class="lead">
        <%= link_to 'Cancel', contacts_path, class: "btn btn-secondary" %>
        <%= link_to 'Edit', edit_contact_path, class: "btn btn-primary" %>
-       <%= link_to 'Delete', contact_path, class: "btn btn-danger" %>
+       <%= link_to 'Delete', contact_path, method: :delete, data: {confirm: "Are you sure? "}, class: "btn btn-danger" %>
 
   </p>
 </div>

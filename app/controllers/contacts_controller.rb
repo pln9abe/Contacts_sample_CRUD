@@ -12,9 +12,6 @@ class ContactsController < ApplicationController
   def show
   end
 
-  def destroy
-  end
-
   def edit
   end
 
@@ -27,7 +24,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new
+    @contact = Contact.new(contact_params)
 
     if @contact.save
       redirect_to contacts_path, notice: "Contact successfully Added"
@@ -35,6 +32,13 @@ class ContactsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    if @contact.destroy
+      redirect_to contacts_path, notice: "Contact successfully destroyed"
+    end
+  end
+
   private
 
   def set_contact
