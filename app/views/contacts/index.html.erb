@@ -14,9 +14,10 @@
              <th><%= contact.name %></th>
              <th><%= contact.number %></th>
              <th><%= contact.email %></th>
+             <th> </th>
          </tr>
         <%end%>
      </tbody>
 
   </table>
-
+<%= link_to 'Add Contact', new_contact_path, class: "btn btn-secondary"  %>
