@@ -6,6 +6,7 @@
         <th>Name</th>
         <th>Contact Number</th>
         <th>Email</th>
+        <th>Action</th>
       </tr>
     </thead>
      <tbody>
@@ -14,7 +15,7 @@
              <th><%= contact.name %></th>
              <th><%= contact.number %></th>
              <th><%= contact.email %></th>
-             <th> </th>
+             <th><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-primary" %></th>
          </tr>
         <%end%>
      </tbody>
